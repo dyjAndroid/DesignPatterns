@@ -1,4 +1,4 @@
-package com.example.designpatterns;
+package com.example.observerpattern;
 
 import org.junit.Test;
 

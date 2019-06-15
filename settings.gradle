@@ -1,1 +1,1 @@
-include ':app', ':strategymode'
+include ':strategymode', ':observerpattern'
