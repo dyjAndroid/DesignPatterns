@@ -1,48 +1,20 @@
 package com.example.observerpattern.data;
 
-import com.example.observerpattern.interf.Observer;
-import com.example.observerpattern.interf.Subject;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Observable;
 
 /**
  * created by Sunday
  * on 2019-06-16 11:52
  */
-public class WeatherData implements Subject {
+public class WeatherData extends Observable {
 
-    private List<Observer> mObservers;
     private float mTemperature;
     private float mHumidity;
     private float mPressure;
 
-    public WeatherData() {
-        mObservers = new ArrayList<>();
-    }
-
-    @Override
-    public void registerObserver(Observer o) {
-        mObservers.add(o);
-    }
-
-    @Override
-    public void removeObserver(Observer o) {
-        int i = mObservers.indexOf(o);
-        if (i >= 0) {
-            mObservers.remove(o);
-        }
-    }
-
-    @Override
-    public void notifyObservers() {
-        for (Observer o :
-                mObservers) {
-            o.update(mTemperature, mHumidity, mPressure);
-        }
-    }
 
     private void measurementsChanged() {
+        setChanged();
         notifyObservers();
     }
 
@@ -51,5 +23,17 @@ public class WeatherData implements Subject {
         mHumidity = humidity;
         mPressure = pressure;
         measurementsChanged();
+    }
+
+    public float getTemperature() {
+        return mTemperature;
+    }
+
+    public float getHumidity() {
+        return mHumidity;
+    }
+
+    public float getPressure() {
+        return mPressure;
     }
 }
