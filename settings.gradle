@@ -1,1 +1,1 @@
-include ':strategymode', ':observerpattern', ':decoratepattern'
+include ':strategymode', ':observerpattern', ':decoratepattern', ':factorypattern'
