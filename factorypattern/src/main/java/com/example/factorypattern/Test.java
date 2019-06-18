@@ -2,6 +2,8 @@ package com.example.factorypattern;
 
 import com.example.factorypattern.pizza.Pizza;
 
+import java.util.Random;
+
 /**
  * created by Sunday
  * on 2019-06-17 09:41
@@ -12,8 +14,12 @@ import com.example.factorypattern.pizza.Pizza;
 public class Test {
 
     public static void main(String[] args) {
-        PizzaStore nyStore = new NYPizzaStore();
-        Pizza pizza = nyStore.orderPizza("cheese");
-        System.out.println("Ethan order a " + pizza.getName() + "\n");
+//        PizzaStore nyStore = new NYPizzaStore();
+//        Pizza pizza = nyStore.orderPizza("cheese");
+//        System.out.println("Ethan order a " + pizza.getName() + "\n");
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            System.out.println("number:" + random.nextInt(2) );
+        }
     }
 }
