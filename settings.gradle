@@ -1,2 +1,2 @@
-include ':strategymode', ':observerpattern', ':decoratepattern', ':factorypattern', ':singletonpattern', ':commandpattern', ':adapterpattern', ':compositepattern', ':statuspattern', ':proxypattern',
+include ':strategymode', ':observerpattern', ':decoratepattern', ':factorypattern', ':singletonpattern', ':commandpattern', ':adapterpattern', ':compositepattern', ':statuspattern', ':proxypattern', ':compoundpattern',
         ':facadepattern', ':templatemethodpattern', ':iteratorpattern'
